@@ -1,10 +1,10 @@
 phrase:
-  access_token: 7dc802029b965bf3ee4a497a4eefa4b71f824e5db23a0b04c0cfffb972f44b05
-  project_id: 616d5f82108daee4d6ba85ecd6f79e7a
+  # access_token: 7dc802029b965bf3ee4a497a4eefa4b71f824e5db23a0b04c0cfffb972f44b05
+  # project_id: 616d5f82108daee4d6ba85ecd6f79e7a
   #access_token: '{{env "PHRASE_ACCESS_TOKEN"}}'
   #project_id: '{{env "PHRASE_PROJECT_ID"}}'
-  ## access_token: ${{env PHRASE_ACCESS_TOKEN}}
-  ## project_id: ${{env PHRASE_PROJECT_ID}}
+  access_token: ${{secrets.PHRASE_ACCESS_TOKEN}}
+  project_id: ${{secrets.PHRASE_PROJECT_ID}}
   push:
     sources:
     - file: ./locales/<locale_name>.json
