@@ -1,0 +1,32 @@
+# Update repo
+name: Update repo
+on:
+  workflow_dispatch: # Allow running from the UI      
+
+jobs:
+
+ # generating placeholder file with production markets
+  obtain-values:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generating vales file
+        uses: actions/checkout@v2
+      - name: Setting up nodejs 16 environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+
+      - name: Install packages with Yarn
+        run: yarn install 
+
+      - name: Running obtain values
+        run: yarn obtainValues
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Adding placeholder json file'
+          add: './src/reports/*.json --force'
+          cwd: '.'
+
+ 
+    
