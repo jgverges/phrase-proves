@@ -27,8 +27,8 @@ jobs:
         with:
           name: translations
           path: ./locales/*
-      - uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Adding placeholder json file'
-          add: './locales/*.json --force'
-          cwd: '.'
+      # - uses: EndBug/add-and-commit@v9
+      #  with:
+       #   message: 'Adding placeholder json file'
+        #  add: './locales/*.json --force'
+         # cwd: '.'
