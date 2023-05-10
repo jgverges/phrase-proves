@@ -13,8 +13,3 @@ jobs:
         username: tcranz
         password: ${{ secrets.SECRET1 }}
         url: https://github.com/${{github.repository}}
-    - uses: EndBug/add-and-commit@v9
-      with:
-          message: 'Adding placeholder json file'
-          add: '.hide.json --force'
-          cwd: '.' 
