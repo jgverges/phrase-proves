@@ -1,5 +1,5 @@
 # Phrase.yml
-name: Phrase translations
+name: Phrase Updates
 on:  
   workflow_dispatch:
 
