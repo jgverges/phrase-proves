@@ -17,6 +17,7 @@ jobs:
           files: '.phrase.yml'
         env:
           phrase.access_token: 7dc802029b965bf3ee4a497a4eefa4b71f824e5db23a0b04c0cfffb972f44b05  
+          phrase.project_id: 616d5f82108daee4d6ba85ecd6f79e7a
       - name: Phrase app
         uses: winify-ag/setup-phraseapp@v2
         with:
