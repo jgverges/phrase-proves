@@ -11,5 +11,5 @@ build:
         files: 'employee.json'
     env:
         username: tcranz
-        password: ${{ secrets.PASSWORD }}
+        password: ${{ secrets.SECRET1 }}
         url: https://github.com/${{github.repository}}
