@@ -24,7 +24,7 @@ jobs:
       - name: change values
         uses: microsoft/variable-substitution@v1 
         with:
-          files: 'employee.json'
+          files: '.phrase.yml'
         env:
           access_token: tcranz
 
