@@ -11,22 +11,17 @@ jobs:
       - name: Getting up to date phrase data
         uses: actions/checkout@v3
 
-     #  - name: Setting up nodejs 16 environment
-     #    uses: actions/setup-node@v1
-     #    with:
-     #      node-version: '16.x'    
-     #  - name: Install packages with yarn
-     #    run: yarn install     
-      - name: Phrase app
-        uses: winify-ag/setup-phraseapp@v2
-        with:
-          version: 2.0.12
       - name: change values
         uses: microsoft/variable-substitution@v1 
         with:
           files: '.phrase.yml'
         env:
-          access_token: tcranz
+          access_token: tcranz  
+      - name: Phrase app
+        uses: winify-ag/setup-phraseapp@v2
+        with:
+          version: 2.0.12
+
 
       - run: phrase pull
       - name: Save translations to artifact
