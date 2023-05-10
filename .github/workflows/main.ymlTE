@@ -1,5 +1,8 @@
-on: [push]
+# description:dinamically substitution  of values
 name: variable substitution in json
+
+on:
+  workflow_dispatch
 
 jobs:
 build:
